@@ -1,0 +1,37 @@
+@import "colors";
+
+.login-page {
+  background: rgb(28, 55, 99);
+  background: linear-gradient(
+    96deg,
+    $primary-color-blue 0%,
+    $primary-color-red 97%
+  );
+
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+  .user-logo-container {
+    flex: 1;
+    position: relative;
+
+    .user-logo {
+      width: 100%;
+      height: auto;
+
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  .login-form-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}

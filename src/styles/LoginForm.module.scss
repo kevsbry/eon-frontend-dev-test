@@ -1,0 +1,76 @@
+@import "colors";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-left: -2.5rem;
+
+  h1 {
+    color: white;
+    margin: 0;
+  }
+
+  input {
+    margin-top: 1.4rem;
+    padding: 1rem 1.4rem 1rem 1.4rem;
+    border: 2px solid white;
+    color: white;
+    font-size: 1rem;
+    border-radius: 50px;
+    background-color: transparent;
+    min-width: 360px;
+    transition: border 200ms ease-in-out;
+
+    &:focus {
+      outline: none;
+      border: 2px solid $secondary-color-one;
+      transition: border 200ms ease-in-out;
+      color: $secondary-color-one;
+
+      &::placeholder {
+        color: $secondary-color-one;
+      }
+    }
+
+    &::placeholder {
+      color: white;
+    }
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $primary-color-blue;
+    border: none;
+    color: white;
+    margin-top: 0.7rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    transition: background-color 200ms ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $secondary-color-two;
+      transition: background-color 200ms ease-in-out;
+    }
+  }
+
+  .form-text-sm {
+    align-self: flex-end;
+    padding-top: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: white;
+    font-size: 0.8rem;
+
+    span {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+}

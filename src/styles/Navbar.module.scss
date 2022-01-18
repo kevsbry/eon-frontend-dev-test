@@ -1,0 +1,38 @@
+@import "colors";
+
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  padding: 1.5rem 8rem 1rem 8rem;
+  z-index: 2;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .company-logo {
+    width: auto;
+    height: 48px;
+    z-index: 200;
+  }
+
+  .sign-up-btn {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 0.8rem 2rem 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition-duration: 250ms;
+
+    &:hover {
+      cursor: pointer;
+      border-color: $secondary-color-three;
+      color: $secondary-color-three;
+      transition-duration: 250ms;
+    }
+  }
+}
