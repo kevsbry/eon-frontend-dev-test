@@ -1,4 +1,5 @@
 @import "colors";
+@import "mediaquery";
 
 .login-page {
   background: rgb(28, 55, 99);
@@ -33,5 +34,38 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+  }
+}
+
+// media queries
+@include maxWidth(860px) {
+  .login-page {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    .user-logo-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      .user-logo {
+        position: absolute;
+        bottom: 0;
+        width: auto;
+        height: 92%;
+      }
+    }
+
+    .login-form-container {
+      padding-left: 2rem;
+    }
+  }
+}
+
+@include maxWidth(550px) {
+  .user-logo {
+    margin-bottom: -3.4rem;
   }
 }
