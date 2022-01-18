@@ -1,4 +1,5 @@
 @import "colors";
+@import "mediaquery";
 
 .form {
   display: flex;
@@ -8,6 +9,7 @@
   h1 {
     color: white;
     margin: 0;
+    font-family: "Noto Serif", serif;
   }
 
   input {
@@ -71,6 +73,50 @@
     span {
       color: white;
       text-decoration: underline;
+    }
+  }
+}
+
+// media queries
+
+@include maxWidth(1100px) {
+  .form {
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    input {
+      margin-top: 1.1rem;
+      padding: 0.8rem 1.2rem 0.8rem 1.2rem;
+      font-size: 0.9rem;
+      min-width: 320px;
+    }
+
+    button {
+      padding-top: 0.8rem;
+      padding-bottom: 0.8rem;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@include maxWidth(600px) {
+  .form {
+    h1 {
+      font-size: 1.2rem;
+    }
+
+    input {
+      margin-top: 1.1rem;
+      padding: 0.6rem 1rem 0.6rem 1rem;
+      font-size: 0.7rem;
+      min-width: 280px;
+    }
+
+    button {
+      padding-top: 0.6rem;
+      padding-bottom: 0.6rem;
+      font-size: 0.7rem;
     }
   }
 }
